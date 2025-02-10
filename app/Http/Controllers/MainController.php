@@ -15,27 +15,12 @@ class MainController extends Controller
     return view('home');
     }
 
-    public function genareteExecises(StorePostRequest $request): View{
-        
-       $exercises = ExerciseController::genareteExecises(request: $request);
-       $answer = ExerciseController::genareteAnswer(questions: $exercises);
-        
-        session(key: ['exercises'=> $exercises]);
-        session(key: ['answers' => $answer]);
 
-       return view(view: 'operations', data: ["exercises" => $exercises]);
-
+    public function exercisesHome(): View{
+        return view('genarator.home');
     }
 
-    public function printExercies(): View{
-      
-        return view('printExercises');
-    }
 
-    public function exportExercies(): Response{
-        // exporta os exercicios 
-        return ExerciseController::exportExercies();
-        
-        }
+
 
 }
