@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{env('APP_NAME')}}</title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{asset(path: 'assets/images/favicon.png') }}" type="image/png">
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="{{asset(path: 'assets/bootstrap/bootstrap.min.css')}}">
-    <!-- main css -->
-    <link rel="stylesheet" href="{{asset(path: 'assets/css/main.css')}}">
-</head>
+@extends('layouts.mainLayout')
 
 <body>
 
     <!-- logo -->
     <div class="text-center my-3">
-        <a href="{{route('home')}}"><img src="{{asset( path: 'assets/images/logo.jpg')}}" alt="logo" class="img-fluid" width="250px"></a>
+        <a href="{{route('exercisesHome')}}"><img src="{{asset( path: 'assets/images/logo.jpg')}}" alt="logo" class="img-fluid" width="250px"></a>
     </div>
 
     <!-- operations -->
@@ -31,11 +18,14 @@
             
              <!-- each operation -->
 
-                @php
-                    if($exercise[3] == '*'){
-                        $exercise[3] = 'x';
-                    }
-                @endphp
+                
+             @php
+             for($i = 0; $i < strlen($exercise); $i++){
+                 if($exercise[$i] == '*'){
+                     $exercise[$i] = 'x';
+                 }
+             }
+             @endphp
 
                     
 
@@ -45,7 +35,6 @@
             </div>
 
             @endforeach
-
 
           
         </div>
@@ -58,7 +47,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col">
-                <a href="{{route('home')}}" class="btn btn-primary px-5">VOLTAR</a>
+                <a href="{{route('exercisesHome')}}" class="btn btn-primary px-5">VOLTAR</a>
             </div>
             <div class="col text-end">
                 <a href="{{route('export')}}" class="btn btn-secondary px-5">DESCARREGAR EXERCÍCIOS</a>

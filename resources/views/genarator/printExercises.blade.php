@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{env('APP_NAME')}}</title>
 </head>
-<body>
-  
+
+  <body>
+
         <h1>Exercicos de Matemática {{env('APP_NAME')}} </h1>
        <!-- operations -->
     <div class="container">
