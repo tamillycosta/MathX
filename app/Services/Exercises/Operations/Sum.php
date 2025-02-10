@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Services\Operations;
-use App\Services\Exercise;
+namespace App\Services\Exercises\Operations;
+
+use App\Services\Exercises\Exercise;
+
 class Sum extends Exercise {
 
     public function generateQuestion($min, $max, $numOperands = 2): string

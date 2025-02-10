@@ -1,5 +1,5 @@
 <?php
-namespace App\Services;
+namespace App\Services\Exercises;
 
 abstract class Exercise 
 {
@@ -7,7 +7,6 @@ abstract class Exercise
     public abstract function generateQuestion( int $min, int $max);
 
 
- 
     public static function createExportFile(): string{
         $exercises = session('exercises');
        

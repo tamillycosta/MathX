@@ -1,9 +1,9 @@
 <?php
 
 
-namespace App\Services\Operations;
+namespace App\Services\Exercises\Operations;
 
-use App\Services\Exercise;
+use App\Services\Exercises\Exercise;
 
 class Subtracion extends Exercise{
 

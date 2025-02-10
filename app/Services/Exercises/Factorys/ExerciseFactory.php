@@ -1,11 +1,11 @@
 <?php
-namespace App\Services\Factorys;
+namespace App\Services\Exercises\Factorys;
 
 
-use App\Services\Operations\Subtracion;
-use App\Services\Operations\Sum;
-use App\Services\Operations\Division;
-use App\Services\Operations\Multiplication;
+use App\Services\Exercises\Operations\Subtracion;
+use App\Services\Exercises\Operations\Sum;
+use App\Services\Exercises\Operations\Division;
+use App\Services\Exercises\Operations\Multiplication;
 
 class ExerciseFactory{
 
