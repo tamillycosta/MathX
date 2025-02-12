@@ -13,4 +13,3 @@
     <link rel="stylesheet" href="{{asset(path: 'assets/css/main.css')}}">
 
 </head>
-

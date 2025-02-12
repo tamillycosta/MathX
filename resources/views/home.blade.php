@@ -1,10 +1,8 @@
 @extends('layouts.mainLayout')
 
-<body >
-    <!-- logo -->
-    <div class="text-center my-3">
-        <img src="{{asset( path: 'assets/images/logo.jpg')}}" alt="logo" class="img-fluid">
-    </div>
+<body>
+    
+@include('layouts.topBar')
 
     <h3 class="text-center text-secondary mb-5">
         Selecione como deseja estudar<br>
@@ -18,9 +16,10 @@
             </div>
 
             <div class="text-end">
-                <a href="#" class="btn btn-primary btn-lg py-3">Praticar com um game</a>
+                <a href="{{route('game')}}" class="btn btn-primary btn-lg py-3">Praticar com um game</a>
             </div>
 
          </div>
     </div>
+    @include('layouts.footer')
 </body>
