@@ -21,6 +21,9 @@ class MainController extends Controller
     }
 
 
+    public function gameHome(){
+        return view('game.home');
+    }
 
 
 }
