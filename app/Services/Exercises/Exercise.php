@@ -7,6 +7,16 @@ abstract class Exercise
     public abstract function generateQuestion( int $min, int $max);
 
 
+    public function generateOperators(int $min, int $max, $numOperands=2): array{
+        $expression = [];
+        for ($j = 0; $j < $numOperands; $j++) {
+            $expression[] = rand(min: $min, max: $max);
+        }
+        return $expression;
+    }
+
+
+
     public static function createExportFile(): string{
         $exercises = session('exercises');
        

@@ -8,11 +8,8 @@ class Sum extends Exercise {
 
     public function generateQuestion($min, $max, $numOperands = 2): string
      {
-            $expression = [];
-            for ($j = 0; $j < $numOperands; $j++) {
-                $expression[] = rand(min: $min, max: $max);
-            }
-
+           
+            $expression = $this->generateOperators($min,$max,$numOperands);
             $exercises = implode(separator: ' + ', array: $expression) ;
             
         
