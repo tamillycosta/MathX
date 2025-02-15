@@ -16,7 +16,6 @@ abstract class Exercise
     }
 
 
-
     public static function createExportFile(): string{
         $exercises = session('exercises');
        
@@ -44,7 +43,7 @@ abstract class Exercise
 
 
     public static function generateAnswer(array $questions){
-        $answers = array_map('self::calculateExpression', $questions);
+        $answers = array_map(callback: 'self::calculateExpression', array: $questions);
 
         return $answers;
     }
@@ -65,10 +64,10 @@ abstract class Exercise
                 if ($operator === '*') {
                     $result = $left * $right;
                 } else {
-                    $result = $right != 0 ? $left / $right : 0; // Evitar divisão por zero
+                    $result = $right != 0 ? $left / $right : 0; 
                 }
     
-                // Substituir na lista de tokens
+              
                 array_splice($tokens, $index - 1, 3, $result);
             }
         }
@@ -84,7 +83,6 @@ abstract class Exercise
                     $result = $left - $right;
                 }
     
-                // Substituir na lista de tokens
                 array_splice($tokens, $index - 1, 3, $result);
             }
         }
