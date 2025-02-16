@@ -19,8 +19,8 @@ Este projeto serve como uma base para entender e aplicar esses conceitos em uma 
 - **Composer**: `composer install`
 - **NPM**: `npm install`
 
-
-A plataforma **Mathx** oferece uma maneira interativa e prática para testar conhecimentos nas operações básicas de matemática, como soma, subtração, multiplicação, divisão e potenciação.
+## 3. **Funcionalidades do projeto**
+A plataforma  oferece uma maneira interativa de testar conhecimentos nas operações básicas de matemática, como soma, subtração, multiplicação, divisão e potenciação.
 
 #### **Modo Gerador de Exercícios**
 Permite a geração de exercícios para as operações mencionadas. Com ele, é possível:
@@ -35,4 +35,12 @@ Permite a geração de exercícios para as operações mencionadas. Com ele, é 
 - **Desafios Interativos**: O usuário é desafiado a resolver questões de soma, subtração, multiplicação, divisão e potênciação em um formato de jogo.
 - **Pontuação e Feedback**: A cada resposta correta, o usuário ganha pontos. Feedback imediato é fornecido para respostas erradas, permitindo o aprendizado contínuo.
 - **Níveis de Dificuldade**: O modo game permite ajustar a dificuldade das questões, com base nas operações envolvidas.
+
+## 4. **Implementaçaõ do projeto**
+
+O projeto segue a arquitetura MVC do Laravel, com a implementação de **Services** como o **PartnerService** para gerar exercícios e validar respostas.
+
+## 4.1 **Services** 
+Foram desenvolvidos submódulos responsáveis pela construção dos exercícios e das perguntas utilizadas no jogo, gerando as entidades de **Operações** e **Levels**dos desafios.
+
 
